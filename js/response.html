@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="" id="subjectDropdown"></select>
+    <script>
+      parsedResponse = [
+        {
+          subject_code: "CS8151",
+          subCode_dept_sem: "cs8151",
+          source: "super",
+        },
+        {
+          subject_code: "CS8151",
+          subCode_dept_sem: "cs8151",
+          source: "regular",
+        },
+        {
+          subject_code: "CS8151",
+          subCode_dept_sem: "cs8151",
+          source: "regular",
+        },
+        {
+          subject_code: "CS8151",
+          subCode_dept_sem: "cs8151",
+          source: "regular",
+        },
+        {
+          subject_code: "IT8551b",
+          subCode_dept_sem: "it8551b_dit_5",
+          source: "regular",
+        },
+        {
+          subject_code: "IT8551b",
+          subCode_dept_sem: "it8551b_dit_5",
+          source: "super",
+        },
+      ];
+
+      var finalResponse = [];
+      var workingResponse = [];
+
+      console.log(parsedResponse);
+      if (parsedResponse === "invalid-auth-or-access") {
+        localStorage.clear();
+        window.location.reload();
+      } else if (parsedResponse === "no-class") {
+        document.getElementById("subjectDropdown").innerHTML = "";
+      } else {
+        // copying over parsedResponse to workingResponse
+        workingResponse = parsedResponse;
+
+        for (var i in workingResponse) {
+          var working_subCode_dept_sem = workingResponse[i].subCode_dept_sem;
+          console.log(working_subCode_dept_sem);
+
+          // checking if the subCode_dept_sem exists in finalResponse
+          if (
+            finalResponse.some(
+              (finalResponse) =>
+                finalResponse.subCode_dept_sem === working_subCode_dept_sem
+            )
+          ) {
+            alert("Exists");
+            // getting index of the value found
+            Array.prototype.getIndexOf = function (el) {
+              var finalResponse = this;
+
+              for (var j = 0; j < finalResponse.length; j++) {
+                console.log(finalResponse[j].subCode_dept_sem);
+                if (finalResponse[j].subCode_dept_sem == el) {
+                  return j;
+                }
+              }
+              return -1;
+            };
+
+            console.log(finalResponse.getIndexOf(working_subCode_dept_sem));
+
+            // check source of the found element
+            var sourceIndex = finalResponse.getIndexOf(
+              working_subCode_dept_sem
+            );
+            // checking if the source is super
+            if (finalResponse[sourceIndex].source === "regular") {
+              finalResponse.splice(sourceIndex, 1, workingResponse[i]);
+            }
+          } else {
+            alert("Doesn't exist");
+            finalResponse.push(workingResponse[i]);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+// getting index of the value found
+/*Array.prototype.getIndexOf = function (el) {
+    var finalResponse = this;
+
+    for (var j = 0; j < finalResponse.length; j++) {
+        if (finalResponse[j].subCode_dept_sem == el) {
+            return j;
+            console.log(j);
+        }
+    }
+    return -1;
+};
+
+var sourceIndex = finalResponse.getIndexOf(
+    working_subCode_dept_sem
+); */

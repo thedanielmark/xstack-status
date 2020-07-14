@@ -1,0 +1,240 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+
+/* overriding Bootstrap styles */
+.btn {
+  border-radius: 0px;
+}
+
+.btn:focus {
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #673ab7;
+  border: #7c4dff;
+}
+
+.btn.btn-primary:hover {
+  background-color: #7c4dff;
+  border: #7c4dff;
+  transition: all 0.5s ease;
+}
+
+.btn.btn-primary:focus {
+  background-color: #7c4dff;
+  border: #7c4dff;
+  transition: all 0.5s ease;
+}
+
+.btn.btn-primary:active {
+  background-color: #7c4dff;
+  border: #7c4dff;
+  transition: all 0.5s ease;
+}
+
+.btn-primary:disabled {
+  color: #fff;
+  background-color: #7c4dff;
+  border-color: #7c4dff;
+}
+
+.jumbotron {
+  background-color: #fff;
+  border-radius: 0px;
+}
+
+.form-control {
+  background-color: #fff;
+  border-bottom: 1px solid #2e3033;
+  border-radius: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.form-control:focus {
+  color: #000;
+  background-color: #ede7f6;
+  border-bottom: 1px solid #2e3033;
+  border-radius: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  outline: none;
+  box-shadow: none;
+  transition: all 0.5s ease;
+}
+
+.input-group-append {
+  background-color: #fff;
+}
+
+.input-group-text {
+  background-color: #fff;
+  border: 0px;
+  border-bottom: 1px solid #2e3033;
+  border-radius: 0px;
+}
+
+.small-text {
+  font-size: 1.3em;
+}
+
+.navbar-brand {
+  font-size: 2em;
+}
+
+.navbar-dark .navbar-text a {
+    color: inherit;
+}
+
+.navbar-dark .navbar-text a:hover {
+    color: #000;
+}
+
+.navbar-dark .navbar-text a:active {
+    color: #fff;
+}
+
+.bg-primary {
+  background-color: #673ab7 !important;
+  color: #fff;
+}
+
+.bg-dark-purple {
+  background-color: #563d7c;
+}
+
+.text-primary {
+  color: #005da6 !important;
+}
+
+#dropdown-card {
+  border: none;
+}
+
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #563d7c;
+}
+
+.services-card {
+  border: 0px;
+  background-color: #f2f2f2;
+}
+
+.card-img-top {
+  width: 7rem;
+  display: block;
+  margin: 0px auto;
+}
+
+.card-body {
+  font-size: 1rem;
+}
+
+.btn-outline-primary {
+    color: #563d7c;
+    border-color: #563d7c;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #563d7c;
+    border-color: #673ab7;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #673ab7;
+    border-color: #7c4dff;
+}
+
+/* custom CSS */
+
+html,
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.landing-body {
+  background-image: url("../images/landing-bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  height: 100%;
+}
+
+#login-jumbotron-row {
+  width: 100%;
+}
+
+.footer {
+  font-size: 0.7em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  #login-jumbotron-row {
+    width: 70%;
+  }
+  .card-img-top {
+    width: 50%;
+    display: block;
+    margin: 0px auto;
+  }
+}
+
+@media (min-width: 768px) {
+  #login-jumbotron-row {
+    width: 70%;
+  }
+
+  .licet-logo-xs {
+    width: 50px;
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  #login-jumbotron-row {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #login-jumbotron-row {
+    width: 40%;
+  }
+}
