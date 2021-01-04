@@ -2,7 +2,7 @@
 
 ![](https://github.com/thedanielmark/mixspace-landing/blob/master/logo%20180x180.png)
 
-This repository contains the entire code for xStack&apos;s  available at [www.mx-out.mixspace.xyz](https://mx-out.mixspace.xyz). MixSpace Cloud Platform is a cloud computing platform with a focus on JAMstack and serverless computing cloud services. The code in this repository is licensed under the [LGPL 2.1](http://www.gnu.org/licenses/lgpl-2.1.html) but certain scripts require the explicit written permission of [Daniel Mark](https://thedanielmark.com) in order to download, modify or distribute pieces of it or entire scripts itself.
+This repository contains the entire code for xStack&apos;s  available at [www.mx-out.mixspace.xyz](https://mx-out.mixspace.xyz). MixSpace Cloud Platform is a cloud computing platform with a focus on JAMstack and serverless computing cloud services.
 
 ### Features
 
